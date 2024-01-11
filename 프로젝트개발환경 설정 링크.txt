@@ -1,0 +1,3 @@
+1. https://www.youtube.com/watch?v=SAqyt8U3_Fs&t=77s : Vue 프로젝트 환경 설정 (+scss)
+2. https://www.youtube.com/watch?v=cSH97mtk7MU : Vue Router 설정
+3. https://velog.io/@dom_hxrdy/webpackfile-loader-%EB%A1%9C-html%EC%97%90%EC%84%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B0%B8%EC%A1%B0%ED%95%98%EA%B8%B0 : webpack에서 file-loader로 svg파일 참조하는 방법

@@ -1,0 +1,32 @@
+.cache/
+.idea/
+.DS_Store/
+node_modules/
+dist/
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# Support for Project snippet scope
+!.vscode/*.code-snippets
+
+# nodejs
+node_modules
+dist/*
+build/*
+*.log
+.DS_Store
+출처: https://redballs.tistory.com/entry/VSCode-프로젝트-Github-업로드-하기 [즐거운인생:티스토리]

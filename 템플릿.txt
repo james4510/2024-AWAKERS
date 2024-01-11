@@ -1,0 +1,240 @@
+<template>
+    <div class="leftContainer">
+        <div id="attendanceBox">
+            <div class="attendance">
+                <p>출석관리</p>
+            </div>
+        </div>
+        <div id="contentsBox">
+            <div class="buttonBox">
+                <div class="buttonBackground">
+                    <button class="entireEvent">전체</button>
+                    <button class="worship">예배</button>
+                    <button class="event">행사</button>
+                    <button class="volunteer">봉사</button>
+                </div>
+            </div>
+            
+        </div>
+        
+        <nav>
+            <i class="fas fa-home"></i>
+            <i class="fas fa-search-location"></i>
+            <i class="fas fa-chart-line"></i>
+            <i class="fas fa-cog"></i>
+        </nav>
+    </div>
+</template>
+
+<script>
+import axios from "axios";
+import dayjs from "dayjs";
+import "dayjs/locale/ko";
+dayjs.locale("ko"); // global로 한국어 locale 사용
+
+export default {
+    data(){
+        return {
+            
+        };
+    },
+};
+</script>
+
+<style lang="scss" scoped>
+@import "~/scss/main.scss";
+
+.leftContainer{
+    width: 324px;
+    height: 700px;
+    border-radius: 50px;
+    background: white;
+    box-shadow: 5px 5px 10px gray;
+
+    #attendanceBox {
+        width: 100%;
+        height: 10%;
+
+        .attendance{
+            @include c-center;
+            width: 100%;
+            height: 100%;
+
+            p{
+                color: black;
+                font-family: "Poppins", sans-serif;
+                line-height: 2.5;
+                text-align: center;
+                font-weight: bold;
+            
+                &:last-child{
+                    width: 160px;
+                    height: 19px;
+                    font-size: 0.9rem;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    
+    #contentsBox{
+            width: 100%;
+            height: 62.5%;
+
+            .buttonBox{
+                @include center;
+                width: 100%;
+                height: 20%;
+
+                .buttonBackground{
+                    width: px;
+                    height: 10px;
+                    background-color: transparent;
+                    border-radius: 10px;
+                    display: flex;
+
+                    button{
+                        width: 97px;
+                        height: 27px;
+                        border: 0;
+                        border-radius: 2px;
+                        outline: 0;
+                        margin-left: 4%;
+                        cursor: pointer;
+
+                        &.entireEvent{
+                            background-color: rgb(187, 187, 187);
+                            color: rgb(83, 83, 83);
+                        }
+                        &.entrieEvent:hover{
+                            background-color: rgb(63, 60, 60);
+                            color: rgb(208, 208, 208);
+                            transition: 0.3s;
+                        }
+
+                        &.worship{
+                            background: rgb(187, 187, 187);
+                            color: rgb(83, 83, 83); 
+                        }
+                        &.worship:hover{
+                            background-color: rgb(63, 60, 60);
+                            color: rgb(208, 208, 208);
+                            transition: 0.3s;
+                        }
+
+                        &.event{
+                            background:rgb(187, 187, 187);
+                            color: rgb(83, 83, 83);
+                        }
+                        &.event:hover{
+                            background-color: rgb(63, 60, 60);
+                            color: rgb(208, 208, 208);
+                            transition: 0.3s;
+                        }
+
+                        &.volunteer{
+                            background: rgb(187, 187, 187);
+                            color: rgb(208, 208, 208);
+                            color: rgb(83, 83, 83);
+                        }
+                        &.volunteer:hover{
+                            background-color: rgb(63, 60, 60);
+                            color: rgb(208, 208, 208);
+                            transition: 0.3s;
+                        }
+                    }
+                }
+            }
+
+            .weatherBox{
+                width: 100%;
+                height: 80%;
+
+                .weatherDegree{
+                    @include center;
+                    width: 100%;
+                    height: 15%;
+
+                    p{
+                        font-size: 3.5rem;
+                        font-weight: 500;
+                        font-family: "Be Vietnam Pro", sans-serif;
+                        color: white;
+                    }
+                }
+
+                .weatherIcon{
+                    @include center;
+                    width: 100%;
+                    height: 60%;
+
+                    img{
+                        width: 168px;
+                        height: 160px;
+                    }
+                }
+
+                .weatherData{
+                    display: flex;
+                    width: 100%;
+                    height: 25%;
+
+                    .detailData{
+                        @include c-center;
+                        width: 33.33%;
+                        height: 100%;
+
+                        // 레이아웃이 3개이기 때문에 동일한 레이아웃을 반복시킴을 알 수 있다.
+                        &:nth-child(1){
+                            margin-left: 10px;
+                        }
+                        &:nth-child(2){
+                            margin-left: 0 -10px;
+                        }
+                        &:nth-child(3){
+                            margin-right: 10px;
+                        }
+
+                        p{
+                            line-height: 1.5;
+                            color: white;
+
+                            &:first-child{
+                                font-size: 1rem;
+                                font-weight: 300;
+                                font-family: "Noto Sans KR", sans-serif;
+                                color: #799ed0;
+                            }
+                        
+                            &:last-child{
+                            font-size: 1rem;
+                            font-weight: 200;
+                            font-family: "Poppins", sans-serif;
+                            }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+
+    nav{
+        @include center-sb;
+        width: calc(100% - 100px);
+        height: 10%;
+        padding: 0 50px;
+
+        i{
+            color: rgb(255, 255, 255);
+            font-size: 1.15rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            &:hover{
+                color: #799ed8;
+            }
+        }
+    }
+}
+</style>
