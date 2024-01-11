@@ -1,16 +1,16 @@
 <template>
     <div class="wrap">
         <div class="container">
-            <!--<MainView />-->
+            <!--<AttendanceView />-->
             <LoginView />
         </div>
     </div>
 </template>
 
 <script>
-import MainView from "../components/MainView.vue";
+import AttendanceView from "../components/AttendanceView.vue";
 import LoginView from "../components/LoginView.vue";
-export default { components: { MainView, LoginView }};
+export default { components: { AttendanceView, LoginView }};
 </script>
 
 <style lang="scss" scoped>
