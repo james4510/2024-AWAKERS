@@ -15,7 +15,7 @@
 
             <!-- 이름 입력란 -->
             <input type="text" id="name" placeholder="이름" class="bottomBorder" v-model="name"/>
-
+            <br>
             <!-- 전화번호 입력란 -->
             <input type="text" id="phone" placeholder="연락처" class="bottomBorder" v-model="phoneNumber" />
         
@@ -53,7 +53,7 @@ export default {
 @import "~/scss/main.scss";
 
 .LoginView{
-        .loginHeader{
+    .loginHeader{
         text-align: center;
         font-size: 15px;
         margin-top: 20px;
@@ -99,20 +99,24 @@ export default {
     footer{
         position: absolute;
         bottom: 20px;
+    
+        button{
+            @include center;
+            width: 330px;
+            padding: 10px;
+            background-color: #606761;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            bottom: 0;
+        }
+
+        button:hover{
+            background-color: #171a17;
+        }
     }
-    button{
-        width: 350px;
-        padding: 10px;
-        background-color: #606761;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        bottom: 0;
-    }
-    button:hover{
-        background-color: #171a17;
-    }
+    
 }
 
 </style>

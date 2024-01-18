@@ -10,7 +10,7 @@
 <script>
 import AttendanceView from "../components/AttendanceView.vue";
 import LoginView from "../components/LoginView.vue";
-export default { components: { AttendanceView, LoginView }};
+export default { components: { AttendanceView, LoginView}};
 </script>
 
 <style lang="scss" scoped>
