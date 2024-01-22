@@ -5,7 +5,7 @@
         <div class="loginHeader">
             <!-- 뒤로가기 아이콘 -->
             <a href="javascript:history.back()"><img src="../assets/chevron-left.svg" alt="뒤로가기"/></a>
-            <p class="loginTitle">로그인</p>
+            <p class="pageTitle">로그인</p>
         </div>
         
         <!-- 어웨이커스 로고 -->
@@ -60,7 +60,7 @@ export default {
         margin-top: 20px;
         display: flex;
 
-        .loginTitle{
+        .pageTitle{
             margin: 5px 5px 5px -20px;
             height: 100%;
             width: 100%;

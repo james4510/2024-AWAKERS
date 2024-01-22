@@ -7,9 +7,7 @@
                     <a href="javascript:history.back()" class="title"><img src="../assets/chevron-left.svg" alt="뒤로가기"/></a>
                 </div>
                 <!-- 페이지 제목-->
-                <div class="titleContainer">
-                    <h1>출석관리</h1>
-                </div>
+                <p class="pageTitle">출석관리</p>
             </div>
             <div class="container">
                 <div class="menu">
@@ -26,7 +24,6 @@
                             </button>
                         </div>
                     </div>
-                    
                 </div>
 
                 <!-- 필터링 버튼 1 (전체, 예배별, 행사별, 봉사별)-->
@@ -40,7 +37,11 @@
 
                     <!-- 필터링 버튼 2 (날짜순, 가나다순)-->
                     <div class="selectSequence">
-                        <h2>토글메뉴</h2>
+                        <button class="dropDownButton">날짜 순</button>
+                        
+                        <div class="subMenu">
+                            <p>가나다 순</p>
+                        </div>
                     </div>
                 </div>
                 
@@ -79,50 +80,47 @@ export default {
 <style lang="scss" scoped>
 @import "~/scss/main.scss";
 
-*{
-    margin: 0;
-    padding: 0;
-}
-
 body{
     font: 15px;
 
     .wrap{
-        width: 350px;
+        width: 330px;
         height: 700px;
         margin: 0 auto;
 
         .header{
-            font-size: 14px;
-            margin-top: 30px;
-            width: 350px;
+            width: 330px;
             height: 80px;
+            text-align: center;
+            font-size: 15px;
+            margin-top: 20px;
+            display: flex;
             
             .backButton{
                 float: left;
             }
-            .titleContainer{
-                text-align: center;
-                padding-top: 5px;
-                margin-right: 17px;
+            .pageTitle{
+                margin: 5px 5px 5px -20px;
+                height: 100%;
+                width: 100%;
             }
         }
 
     .container{
         height: 800px;
-        width: 350px;
+        width: 330px;
         //background: #ccc;
 
         .menu{
             font-size: 17px;
-            width: 350px;
+            width: 330px;
             height: 50px;
             //background: #d3d5f3;
             float: left;
             display: flex;
 
             .filterMenu{
-                width: 350px;
+                width: 330px;
                 height: 20px;
                 display: flex;
                 .title{
@@ -141,18 +139,17 @@ body{
                     }
                 }
             }
-
         }
 
         .filterButton{
-            width: 350px;
-            height: 50px;
+            width: 330px;
+            height: 100px;
             .selectTypeButton{
                 display: flex;
                 gap: 7px;
                 border-radius: 5px;
+                width: 200px;
                 height: 30px;
-                width: 50px;
                 .selectType{
                     width: 50px;
                     height: 30px;
@@ -166,9 +163,10 @@ body{
                     background-color: rgb(88, 87, 87);
                 }
             }
+
         }
         .contents{
-                width: 350px;
+                width: 330px;
                 height: 700px;
                 //background: #fffa99;
                 float: left;
