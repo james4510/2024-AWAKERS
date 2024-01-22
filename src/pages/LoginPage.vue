@@ -1,7 +1,6 @@
 <template>
     <div class="wrap">
         <div class="container">
-            <!--<AttendanceView />-->
             <LoginView />
         </div>
     </div>

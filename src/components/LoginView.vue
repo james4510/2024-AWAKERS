@@ -26,6 +26,7 @@
     <footer>
         <!-- 로그인 버튼 -->
         <button @click="login">로그인 하기</button>
+        <a href="#/AttendancePage" class="">AttendancePage</a>
     </footer>
 </div>
     
@@ -44,8 +45,8 @@ export default {
             //로그인 로직
             console.log("로그인 시도:", this.name, this.phoneNumber);
             //여기에 실제 로그인 로직 추가하기
-        }
-    }
+        },
+    },
 }
 </script>
 
