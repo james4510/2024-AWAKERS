@@ -19,8 +19,8 @@
 
                         <!--토스트 팝업 메뉴 버튼 -->
                         <div class="toast">
-                            <button type="button" onclick="alert('팝업창')" class="toastButton">
-                                <img src="../assets/options-horizontal.svg" alt="">
+                            <button type="button" class="toastButton">
+                                <img src="../assets/options-horizontal.svg" @click="addEvent"  alt="Add Event" class="addButton">
                             </button>
                         </div>
                     </div>
@@ -39,17 +39,22 @@
                     <div class="selectSequence">
                         <button class="dropDownButton">날짜 순</button>
                         
-                        <div class="subMenu">
-                            <p>가나다 순</p>
-                        </div>
                     </div>
                 </div>
                 
                 <!-- 컨텐츠 -->
                 <div class="contents">
-                    <div class="contentsBox">
-                        
+                    <div v-for="event in events" :key="event.id" class="contentsBox">
+                        <div class="contentsTitle">{{ event.name }}</div>
+                        <div class="contentsDate">{{ event.date }}</div>
+                        <div class="etc">
+                            <div class="attendance">{{ event.attendees }}명 출석</div>
+                            <div class="type">{{ event.type }}</div>
+                        </div>
                     </div>
+
+                    <!-- 스크롤을 감지하기 위한 이벤트 리스너 -->
+                    <div ref="scrollContainer" @scroll="handleScroll" class="scrollContainer"></div>
                 </div>
             </div>
             
@@ -63,16 +68,38 @@ export default {
     data(){
         return {
             events: [
-                //행사 데이터 예시
                 {
-                    id: 1, 
-                    title: '예배 1',
-                    date: '2024-01-12',
-                    attendance: 50,
+                    name: 'AWAKE 예배',
+                    date: '1월 7일',
+                    attendees: 55,
                     type: '예배',
                 },
             ],
         }
+    },
+    methods: {
+        //스크롤 이벤트 핸들러
+        handleScroll(){
+            //스크롤이 끝에 도달하면 새로운 행사 추가
+            if(
+                this.$refs.scrollContainer.scrollTop +
+                this.$refs.scrollContainer.clientheight >=
+                this.$refs.scrollContainer.scollHeight
+            ) {
+                this.addEvent();
+            }
+        },
+        //새로운 행사 추가 매서드
+        addEvent(){
+            const newEvent = {
+                id: this.events.length + 1,
+                name: `Event ${this.events.length + 1}`,
+                date: `1월 7일`,     //행사 날짜는 실제 날짜로 대체하기
+                attendees: Math.floor(Math.random() * 100) + 1,     //참석자 수는 랜덤
+                type: ``
+            };
+            this.events.push(newEvent);
+        },
     },
 };
 </script>
@@ -98,6 +125,7 @@ body{
             
             .backButton{
                 float: left;
+                cursor: pointer;
             }
             .pageTitle{
                 margin: 5px 5px 5px -20px;
@@ -136,6 +164,11 @@ body{
                     .toastButton{
                         border: none;
                         background-color: transparent;
+                        cursor: pointer;
+
+                        .addButton{
+                            cursor: pointer;
+                        }
                     }
                 }
             }
@@ -156,6 +189,7 @@ body{
                     border : none;
                     border-radius : 4px;
                     color: rgb(91, 88, 88);
+                    cursor: pointer;
                     //background-color: rgb(204, 198, 198);
                 }
                 .selectType:hover{
@@ -164,12 +198,68 @@ body{
                 }
             }
 
+            .selectSequence{
+                    .dropDownButton{
+                        background-color: transparent;
+                        border: none;
+
+                    }
+                }
+
         }
         .contents{
                 width: 330px;
                 height: 700px;
                 //background: #fffa99;
                 float: left;
+
+                .contentsBox{
+                    margin-top: 20px;
+                    width: 310px;
+                    height: 60px;
+                    background-color: rgb(223, 219, 219);
+                    border-radius: 10px;
+                    padding: 10px;
+
+                    .contentsTitle{
+                        font-size: 17px;
+                        font-weight: bold;
+                        color: rgb(98, 97, 97);
+                    }
+
+                    .contentsDate{
+                        font-size: 10px;
+                        margin-top: 5px;
+                        color: rgb(132, 129, 129);
+                    }
+
+                    .etc{
+                        margin-top: 10px;
+                        display: flex;
+                        gap: 6px;
+                        .attendance{
+                            color: rgb(125, 124, 124);
+                            font-weight: bold;
+                            font-size: 13px;
+                        }
+
+                        .type{
+                            clear: both;
+                            float: left;
+                            width: 27px;
+                            height: 15px;
+                            background-color: white;
+                            border-radius: 10px;
+                            font-size: 10px;
+                            font-weight: 550;
+                        }
+                    }
+
+                    .scrollContainer{
+                        height: 300px;
+                        overflow-y: scroll;
+                    }
+                }
             }  
     
         }
