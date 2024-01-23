@@ -1,5 +1,17 @@
 <template>
     <body>
+        <div class="blackBg" v-if="isOpen == true">
+            <div class="whiteBg">
+                <div class="modalHeader">
+                    <h4>일정 관리</h4>
+                    <img src="../assets/close.svg" @click="isOpen=false" alt="Close Event Tab">
+                </div>
+                <div class="editEvent">
+                    <button class="addEvent">신규일정 추가하기</button>
+                    <button class="modifyEvent">수정하기</button>
+                </div>
+            </div>
+        </div>
         <div class="wrap">
             <div class="header">
                 <!-- 뒤로 가기 버튼 -->
@@ -20,7 +32,7 @@
                         <!--토스트 팝업 메뉴 버튼 -->
                         <div class="toast">
                             <button type="button" class="toastButton">
-                                <img src="../assets/options-horizontal.svg" @click="addEvent"  alt="Add Event" class="addButton">
+                                <img src="../assets/options-horizontal.svg" @click="isOpen=true" alt="Add Event" class="addButton">
                             </button>
                         </div>
                     </div>
@@ -75,6 +87,7 @@ export default {
                     type: '예배',
                 },
             ],
+            isOpen: false,
         }
     },
     methods: {
@@ -96,7 +109,7 @@ export default {
                 name: `Event ${this.events.length + 1}`,
                 date: `1월 7일`,     //행사 날짜는 실제 날짜로 대체하기
                 attendees: Math.floor(Math.random() * 100) + 1,     //참석자 수는 랜덤
-                type: ``
+                type: `예배`
             };
             this.events.push(newEvent);
         },
@@ -107,9 +120,46 @@ export default {
 <style lang="scss" scoped>
 @import "~/scss/main.scss";
 
+
+
 body{
     font: 15px;
+    margin: 0;
+    
+    
+    .blackBg{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
 
+        .whiteBg{
+            width: 585px;
+            height: 150px;
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+
+            .modalHeader{
+                float: left;
+            }
+
+            .editEvent{
+                border: none;
+            }
+        }
+}
+
+    
     .wrap{
         width: 330px;
         height: 700px;

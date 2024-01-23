@@ -3,8 +3,6 @@
     <div>
         <!-- 로그인 문자열 -->
         <div class="loginHeader">
-            <!-- 뒤로가기 아이콘 -->
-            <a href="javascript:history.back()"><img src="../assets/chevron-left.svg" alt="뒤로가기"/></a>
             <p class="pageTitle">로그인</p>
         </div>
         
@@ -25,8 +23,7 @@
         
     <footer>
         <!-- 로그인 버튼 -->
-        <button @click="login">로그인 하기</button>
-        <a href="#/AttendancePage" class="">AttendancePage</a>
+        <button type="button" onclick="location.href='#/AttendancePage'">로그인 하기</button>
     </footer>
 </div>
     
@@ -61,9 +58,8 @@ export default {
         display: flex;
 
         .pageTitle{
-            margin: 5px 5px 5px -20px;
             height: 100%;
-            width: 100%;
+            width: 95%;
         }
     
     }
@@ -103,8 +99,10 @@ export default {
     
         button{
             @include center;
+            font-size: 15px;
+            font-weight: bold;
             width: 330px;
-            padding: 10px;
+            padding: 15px;
             background-color: #606761;
             color: white;
             border: none;
