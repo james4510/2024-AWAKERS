@@ -3,8 +3,8 @@
         <div class="blackBg" v-if="isOpen == true">
             <div class="whiteBg">
                 <div class="modalHeader">
-                    <h4>일정 관리</h4>
-                    <img src="../assets/close.svg" @click="isOpen=false" alt="Close Event Tab">
+                    <h4 class="title">일정 관리</h4>
+                    <img src="../assets/close.svg" @click="isOpen=false" alt="Close Event Tab" class="closeBtn">
                 </div>
                 <div class="editEvent">
                     <button class="addEvent">신규일정 추가하기</button>
@@ -139,7 +139,7 @@ body{
         left: 0;
 
         .whiteBg{
-            width: 585px;
+            width: 90%;
             height: 150px;
             background: white;
             border-radius: 20px;
@@ -147,14 +147,29 @@ body{
             position: fixed;
             bottom: 0;
             left: 0;
-            text-align: center;
 
             .modalHeader{
-                float: left;
+                width: 100%px;
+                font-size: 20px;
+                font-weight: bold;
+                color: rgb(123, 121, 121);
+                display: flex;
+
+                .closeBtn{
+                    margin-left: auto;
+                    cursor: pointer;
+                }
             }
 
             .editEvent{
                 border: none;
+                width: 350px;
+                height: 40px;
+                border-radius: 7px;
+                flex-direction: column;
+                display: inline-flex;
+                gap: 7px;
+                font-size: 20px;
             }
         }
 }
