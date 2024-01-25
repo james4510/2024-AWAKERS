@@ -257,6 +257,8 @@ body{
             }
         }
 
+
+        
         .contentsContainer{
             .contents{
                 width: 330px;
