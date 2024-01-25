@@ -256,8 +256,6 @@ body{
                 }
             }
         }
-
-
         
         .contentsContainer{
             .contents{
