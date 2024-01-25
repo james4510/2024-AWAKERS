@@ -1,17 +1,5 @@
 <template>
     <body>
-        <div class="blackBg" v-if="isOpen == true">
-            <div class="whiteBg">
-                <div class="modalHeader">
-                    <h4 class="title">일정 관리</h4>
-                    <img src="../assets/close.svg" @click="isOpen=false" alt="Close Event Tab" class="closeBtn">
-                </div>
-                <div class="editEvent">
-                    <button class="addEvent">신규일정 추가하기</button>
-                    <button class="modifyEvent">수정하기</button>
-                </div>
-            </div>
-        </div>
         <div class="wrap">
             <div class="header">
                 <!-- 뒤로 가기 버튼 -->
@@ -25,14 +13,12 @@
                 <div class="menu">
                     <div class="filterMenu">
                         <!-- 페이지 소제목-->
-                        <div class="title">
-                            일정 선택
-                        </div>    
+                        <div class="title">일정 선택</div>    
 
                         <!--토스트 팝업 메뉴 버튼 -->
                         <div class="toast">
                             <button type="button" class="toastButton">
-                                <img src="../assets/options-horizontal.svg" @click="isOpen=true" alt="Add Event" class="addButton">
+                                <img src="../assets/plus-square.svg" @click="isOpen=true" alt="Add Event" class="addButton">
                             </button>
                         </div>
                     </div>
@@ -46,27 +32,24 @@
                         <button class="selectType">행사</button>
                         <button class="selectType">봉사</button>
                     </div>
-
-                    <!-- 필터링 버튼 2 (날짜순, 가나다순)-->
-                    <div class="selectSequence">
-                        <button class="dropDownButton">날짜 순</button>
-                        
-                    </div>
                 </div>
                 
                 <!-- 컨텐츠 -->
-                <div class="contents">
-                    <div v-for="event in events" :key="event.id" class="contentsBox">
-                        <div class="contentsTitle">{{ event.name }}</div>
-                        <div class="contentsDate">{{ event.date }}</div>
-                        <div class="etc">
-                            <div class="attendance">{{ event.attendees }}명 출석</div>
-                            <div class="type">{{ event.type }}</div>
+                <div class="contentsContainer">
+                    <div class="contents">
+                        <div v-for="event in events" :key="event.id" class="contentsBox">
+                            <div class="contentsTitle">{{ event.name }}</div>
+                            <div class="contentsDate">{{ event.date }}</div>
+                            <div class="etc">
+                                <div class="attendance">{{ event.attendees }}명 출석</div>
+                                <div class="type">{{ event.type }}</div>
+                            </div>
+                            <img src="../assets/options-horizontal.svg" alt="Edit Event" class="edditEvents" />
                         </div>
-                    </div>
 
-                    <!-- 스크롤을 감지하기 위한 이벤트 리스너 -->
-                    <div ref="scrollContainer" @scroll="handleScroll" class="scrollContainer"></div>
+                        <!-- 스크롤을 감지하기 위한 이벤트 리스너 -->
+                        <div ref="scrollContainer" @scroll="handleScroll" class="scrollContainer"></div>
+                    </div>
                 </div>
             </div>
             
@@ -128,8 +111,6 @@ body{
     
     
     .blackBg{
-        margin: 0;
-        padding: 0;
         box-sizing: border-box;
         width: 100%;
         height: 100%;
@@ -138,18 +119,19 @@ body{
         top: 0;
         left: 0;
 
+        /*
+        //모달창 UI 예제
         .whiteBg{
-            width: 90%;
+            width: 350px;
             height: 150px;
             background: white;
             border-radius: 20px;
             padding: 20px;
-            position: fixed;
-            bottom: 0;
-            left: 0;
+            margin: auto;
+            position: relative;
 
             .modalHeader{
-                width: 100%px;
+                width: 100%;
                 font-size: 20px;
                 font-weight: bold;
                 color: rgb(123, 121, 121);
@@ -162,19 +144,16 @@ body{
             }
 
             .editEvent{
-                border: none;
-                width: 350px;
-                height: 40px;
-                border-radius: 7px;
+                width: 250px;
+                height: 150px;
                 flex-direction: column;
                 display: inline-flex;
                 gap: 7px;
-                font-size: 20px;
             }
         }
-}
+    */
 
-    
+}
     .wrap{
         width: 330px;
         height: 700px;
@@ -196,6 +175,7 @@ body{
                 margin: 5px 5px 5px -20px;
                 height: 100%;
                 width: 100%;
+                color: gray;
             }
         }
 
@@ -213,14 +193,16 @@ body{
             display: flex;
 
             .filterMenu{
+                font-size: 18px;
                 width: 330px;
-                height: 20px;
+                height: 24px;
                 display: flex;
                 .title{
-                    //color: rgb(83, 82, 82);
-                    font-weight: 600;
+                    color: rgb(118, 114, 114);
+                    margin-top: 3px;
+                    font-weight: 800;
                     width: 80px;
-                    height: 20px;
+                    height: 24px;
                 }
 
                 .toast{
@@ -267,24 +249,24 @@ body{
                     .dropDownButton{
                         background-color: transparent;
                         border: none;
-
                     }
                 }
 
         }
-        .contents{
+
+        .contentsContainer{
+            .contents{
                 width: 330px;
                 height: 700px;
                 //background: #fffa99;
                 float: left;
 
                 .contentsBox{
-                    margin-top: 20px;
-                    width: 310px;
-                    height: 60px;
+                    width: 290px;
+                    height: 50px;
                     background-color: rgb(223, 219, 219);
                     border-radius: 10px;
-                    padding: 10px;
+                    padding: 16px;
 
                     .contentsTitle{
                         font-size: 17px;
@@ -309,15 +291,24 @@ body{
                         }
 
                         .type{
+                            color: gray;
+                            background-color: white;
                             clear: both;
                             float: left;
-                            width: 27px;
-                            height: 15px;
-                            background-color: white;
-                            border-radius: 10px;
-                            font-size: 10px;
-                            font-weight: 550;
+                            width: 25px;
+                            height: 16px;
+                            border-radius: 6px;
+                            font-weight: 650;
+                            font-size: 10.8px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
                         }
+                    }
+
+                    .edditEvents{
+                        display: flex;
                     }
 
                     .scrollContainer{
@@ -325,10 +316,10 @@ body{
                         overflow-y: scroll;
                     }
                 }
-            }  
-    
-        }
+            }
+        }  
     }
+}
 }
 
 

@@ -46,6 +46,7 @@
     "dayjs": "^1.11.10",
     "react-scripts": "^3.0.1",
     "vue": "^3.2.14",
+    "vue-mobile-detection": "^2.0.1",
     "vue-router": "^4.2.5"
   },
   "eslintConfig": {
