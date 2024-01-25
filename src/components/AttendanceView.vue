@@ -24,14 +24,25 @@
                     </div>
                 </div>
 
-                <!-- 필터링 버튼 1 (전체, 예배별, 행사별, 봉사별)-->
-                <div class="filterButton">
-                    <div class="selectTypeButton">
-                        <button class="selectType">전체</button>
-                        <button class="selectType">예배</button>
-                        <button class="selectType">행사</button>
-                        <button class="selectType">봉사</button>
+                <!-- 필터링 버튼 -->
+                <div class="filters">
+                    <!-- 필터링 버튼 1 (전체, 예배별, 행사별, 봉사별)-->
+                    <div class="filterButton">
+                        <div class="selectTypeButton">
+                            <button class="selectType">전체</button>
+                            <button class="selectType">예배</button>
+                            <button class="selectType">행사</button>
+                            <button class="selectType">봉사</button>
+                        </div>
                     </div>
+
+                    <!-- 필터링 버튼 2 -->
+                    <form action="#">
+                        <select name="languages" id="lang">
+                            <option value="javascript">날짜순</option>
+                            <option value="php">가나다순</option>
+                        </select>
+                    </form>
                 </div>
                 
                 <!-- 컨텐츠 -->
@@ -244,14 +255,6 @@ body{
                     background-color: rgb(88, 87, 87);
                 }
             }
-
-            .selectSequence{
-                    .dropDownButton{
-                        background-color: transparent;
-                        border: none;
-                    }
-                }
-
         }
 
         .contentsContainer{
