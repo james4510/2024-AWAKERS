@@ -11,12 +11,10 @@
 - `package.json` 옵션으로 `browserslist` 추가!<br>
 - `.postcssrc.js` 생성(PostCSS 구성 옵션)!<br>
 - `.babelrc.js` 생성(Babel 구성 옵션)!<br>
-=======
 
 ## 중요 명령어
 - `npm run dev` : 개발자 모드로 실행 <br>
 
-=======
 
 ## Visual Studio Code Extensions
 - `Veter`
