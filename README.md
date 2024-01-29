@@ -5,15 +5,15 @@
 2. zip파일 바탕화면에 압축 해제
 3. VScode에서 해당 폴더로 이동
    1. cd `desktop`
-   2. cd `2024-AWAKERS-develop`
-   3. cd `2024-AWAKERS-develop`
+   2. cd `2024-AWAKERS-develop` (폴더 이름은 변경 가능)
+   3. cd `2024-AWAKERS-develop` (폴더 이름은 변경 가능)_
    4. npm install
 5. npm run dev로 프로젝트 실행
 6. `npm run dev` : 개발자 모드로 실행 <br>
 
 ## 중요 명령어
 - `npm run dev` : 개발자 모드로 실행
-- `Ctrl + c` : 작업 중지<br>
+- `Ctrl + c` : `Y`입력시 작업 중지<br>
 
 
 ## Visual Studio Code Extensions
