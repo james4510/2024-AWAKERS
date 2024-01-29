@@ -1,27 +1,11 @@
-# Webpack 기본 템플릿
+#AWAKERS
 
-__webpack__: 모듈(패키지) 번들러의 핵심 패키지<br>
-__webpack-cli__: 터미널에서 Webpack 명령(CLI)을 사용할 수 있음<br>
-__webpack-dev-server__: 개발용으로 Live Server를 실행(HMR)<br>
-
-__html-webpack-plugin__: 최초 실행될 HTML 파일(템플릿)을 연결<br>
-__copy-webpack-plugin__: 정적 파일(파비콘, 이미지 등)을 제품(`dist`) 폴더로 복사<br>
-
-__sass-loader__: SCSS(Sass) 파일을 로드<br>
-__postcss-loader__: PostCSS(Autoprefixer)로 스타일 파일을 처리<br>
-__css-loader__: CSS 파일을 로드<br>
-__style-loader__: 로드된 스타일(CSS)을 `<style>`로 `<head>`에 삽입<br>
-__babel-loader__: JS 파일을 로드<br>
-
-__@babel/core__: ES6 이상의 코드를 ES5 이하 버전으로 변환<br>
-__@babel/preset-env__: Babel 지원 스펙을 지정<br>
-__@babel/plugin-transform-runtime__: Async/Await 문법 지원<br>
-
-__sass__: SCSS(Sass) 문법을 해석(스타일 전처리기)<br>
-__postcss__: Autoprefixer 등의 다양한 스타일 후처리기 패키지<br>
-__autoprefixer__: 스타일에 자동으로 공급 업체 접두사(Vendor prefix)를 적용하는 PostCSS의 플러그인<br> 
-
-## 주의사항!
+## Vue.js 개발환경 명령어
+1. Visual Studio Code 터미널을 연다.
+2. cd desktop 입력
+3. nox degit SON7AE/vue3_webpack_template#eslint 프로젝트 이름
+4. cd 프로젝트 이름
+5. npm install (or yarn install)
 
 - `npm i -D webpack-dev-server@next`로 설치(webpack-cli 버전(@4^)과 일치)!<br>
 - `package.json` 옵션으로 `browserslist` 추가!<br>
@@ -34,9 +18,25 @@ __autoprefixer__: 스타일에 자동으로 공급 업체 접두사(Vendor prefi
 
 =======
 
-## Visual Studio Code Extension 모음
+## Visual Studio Code Extensions
 - `HTML CSS Support` : HTML 요소의 class에서 css 선택자 요소를 쓸 때 자동 완성 기능 지원해주는 익스텐션
 - `HTML to CSS autocompletion` : CSS에서 코딩할 때 HTML에서 사용한 속성이름을 자동 완성해주는 기능 지원해주는 익스텐션
-- `Auto Rename Tag` : 태그 이름을 수정할 때,
-# Awakers
->>>>>>> 082cd00a12bebd45213f9e4a1957b7a5ee2027fa
+- `Auto Rename Tag` : 태그 이름을 수정할 때, <>여는 태그와 </>닫는 태그를 동시에 수정하게 해주는 익스텐션
+- `Auto Close Tag` : 태그를 작성할 때 여는 태그만 입력하면 닫는 태그가 자동으로 작성이 되게 하는 익스텐션
+- `Highlight Matching Tag` : 쌍이 되는 태그를 표시해 주는 익스텐션
+- `HTML End Tag Labels` : 마지막 닫는 태그에 클래스명을 주석처리로 표시하여 이 태그가 어느 역할을 하는 태그인지 알 수 있게 해주는 익스텐션
+- `HTMLHing` : html 코딩할 때 알맞지 않은 문법이나 빠진 부분이 있으면 ide처럼 알려주는 익스텐션
+- `image preview` : 이미지의 프리뷰를 볼 수 있게 하는 익스텐션
+- `HTML Auto Completion` : 태그 구성 자동 완성 익스텐션
+    1. !html 치고 엔터
+    2. !table 치고 엔터
+    3. !form 치고 엔터
+- `Stylelint` : css 구문 오류를 잡아주게 도와주는 익스텐션
+- `vscode-styled-components` : css문법 표현 자동완성 기능 제공하는 익스텐션
+- `Veter`
+- `ES7 React snippets`
+- `ESLint`
+- `VSCode Great Icons`
+- `Prettier-Code formatter`
+- `Visual Studio IntelliCode`
+
