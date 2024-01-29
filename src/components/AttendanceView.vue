@@ -232,59 +232,47 @@ body{
                             background-color: transparent;
                             cursor: pointer;
 
-                            .addButton{
-                                cursor: pointer;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .filters{
-                
-                .filterButton{
-                    width: 330px;
-                    height: 100px;
-                    
-
-                    .selectTypeButton{
-                        display: flex;
-                        gap: 7px;
-                        border-radius: 5px;
-                        width: 200px;
-                        height: 30px;
-                        
-                        .selectType{
-                            width: 50px;
-                            height: 30px;
-                            border : none;
-                            border-radius : 4px;
-                            color: rgb(91, 88, 88);
+                        .addButton{
                             cursor: pointer;
-                            //background-color: rgb(204, 198, 198);
                         }
-
-                        .selectType:hover{
-                            color: white;
-                            background-color: rgb(88, 87, 87);
-                        }
-                    }
-
-                    .filterButton2{
-                        float: left;
-                        margin: 10px;
                     }
                 }
-
             }
-        
-            .contentsContainer{
+        }
 
-                .contents{
-                    width: 330px;
-                    height: 700px;
-                    //background: #fffa99;
-                    float: left;
+        .filterButton{
+            width: 330px;
+            height: 100px;
+            .selectTypeButton{
+                display: flex;
+                gap: 7px;
+                border-radius: 5px;
+                width: 200px;
+                height: 30px;
+                .selectType{
+                    width: 50px;
+                    height: 30px;
+                    border : none;
+                    border-radius : 4px;
+                    color: rgb(91, 88, 88);
+                    cursor: pointer;
+                    //background-color: rgb(204, 198, 198);
+                }
+                .selectType:hover{
+                    color: white;
+                    background-color: rgb(88, 87, 87);
+                }
+            }
+        }
+
+
+        
+        .contentsContainer{
+            .contents{
+                width: 330px;
+                height: 700px;
+                //background: #fffa99;
+                float: left;
 
                     .contentsBox{
                         width: 290px;
