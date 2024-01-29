@@ -1,11 +1,6 @@
 #AWAKERS
 
-## Vue.js 개발환경 명령어
-1. Visual Studio Code 터미널을 연다.
-2. cd desktop 입력
-3. nox degit SON7AE/vue3_webpack_template#eslint 프로젝트 이름
-4. cd 프로젝트 이름
-5. npm install (or yarn install)
+## Vue.js 개발환경 설정 
 
 - `npm i -D webpack-dev-server@next`로 설치(webpack-cli 버전(@4^)과 일치)!<br>
 - `package.json` 옵션으로 `browserslist` 추가!<br>
