@@ -1,11 +1,9 @@
 #AWAKERS
 
 ## Vue.js 개발환경 설정 
-
-- `npm i -D webpack-dev-server@next`로 설치(webpack-cli 버전(@4^)과 일치)!<br>
-- `package.json` 옵션으로 `browserslist` 추가!<br>
-- `.postcssrc.js` 생성(PostCSS 구성 옵션)!<br>
-- `.babelrc.js` 생성(Babel 구성 옵션)!<br>
+1. 해당 리포지토리 .zip파일 다운
+2. .zip파일 압축해제 이후 npm install --dev 실행
+3. npm run dev로 프로젝트 실행
 
 ## 중요 명령어
 - `npm run dev` : 개발자 모드로 실행 <br>
