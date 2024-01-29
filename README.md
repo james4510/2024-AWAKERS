@@ -12,7 +12,8 @@
 6. `npm run dev` : 개발자 모드로 실행 <br>
 
 ## 중요 명령어
-- `npm run dev` : 개발자 모드로 실행 <br>
+- `npm run dev` : 개발자 모드로 실행
+- `Ctrl + c` : 작업 중지<br>
 
 
 ## Visual Studio Code Extensions
