@@ -19,6 +19,12 @@
 =======
 
 ## Visual Studio Code Extensions
+- `Veter`
+- `ES7 React snippets`
+- `ESLint`
+- `VSCode Great Icons`
+- `Prettier-Code formatter`
+- `Visual Studio IntelliCode`
 - `HTML CSS Support` : HTML 요소의 class에서 css 선택자 요소를 쓸 때 자동 완성 기능 지원해주는 익스텐션
 - `HTML to CSS autocompletion` : CSS에서 코딩할 때 HTML에서 사용한 속성이름을 자동 완성해주는 기능 지원해주는 익스텐션
 - `Auto Rename Tag` : 태그 이름을 수정할 때, <>여는 태그와 </>닫는 태그를 동시에 수정하게 해주는 익스텐션
@@ -33,10 +39,3 @@
     3. !form 치고 엔터
 - `Stylelint` : css 구문 오류를 잡아주게 도와주는 익스텐션
 - `vscode-styled-components` : css문법 표현 자동완성 기능 제공하는 익스텐션
-- `Veter`
-- `ES7 React snippets`
-- `ESLint`
-- `VSCode Great Icons`
-- `Prettier-Code formatter`
-- `Visual Studio IntelliCode`
-
