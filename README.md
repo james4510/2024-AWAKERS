@@ -15,6 +15,11 @@
 - `npm run dev` : 개발자 모드로 실행
 - `Ctrl + c` : `Y`입력시 작업 중지<br>
 
+## GitHub 협업 하는 방법!!! (매우 중요!!!)
+### `Feature-Branch` 전략 사용
+- `Feature-Branch` 전략이란?
+  -> `Main Branch`, `Develop Branch`, `Feature Branch` 이 세개의 브랜치를 사용하여 여러 팀원이 동시에 다양한 작업을 진행할 수 있으며, 변경 사항을 체계적으로 통합할 수 있게 해주는 방식
+- 
 
 ## Visual Studio Code Extensions
 - `Veter`
